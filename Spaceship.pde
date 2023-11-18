@@ -8,39 +8,40 @@ class Spaceship extends Floater
     yCorners = new int[corners];
 
 
-    xCorners[0] = 16;
+    xCorners[0] = 24;
     yCorners[0] = 0;
-    xCorners[1] = 6;
-    yCorners[1] = 4;
-    xCorners[2] = -2;
-    yCorners[2] = 6;
-    xCorners[3] = -4;
-    yCorners[3] = 10;
-    xCorners[4] = -16;
-    yCorners[4] = 10;
-    xCorners[5] = -10;
-    yCorners[5] = 6;
-    xCorners[6] = -16;
-    yCorners[6] = 4;
-    xCorners[7] = -16;
-    yCorners[7] = -4;
-    xCorners[8] = -10;
-    yCorners[8] = -6;
-    xCorners[9] = -16;
-    yCorners[9] = -10;
-    xCorners[10] = -4;
-    yCorners[10] = -10;
-    xCorners[11] = -2;
-    yCorners[11] = -6;
-    xCorners[12] = 6;
-    yCorners[12] = -4;
+    xCorners[1] = 9;
+    yCorners[1] = 6;
+    xCorners[2] = -3;
+    yCorners[2] = 9;
+    xCorners[3] = -6;
+    yCorners[3] = 15;
+    xCorners[4] = -24;
+    yCorners[4] = 15;
+    xCorners[5] = -15;
+    yCorners[5] = 9;
+    xCorners[6] = -24;
+    yCorners[6] = 6;
+    xCorners[7] = -24;
+    yCorners[7] = -6;
+    xCorners[8] = -15;
+    yCorners[8] = -9;
+    xCorners[9] = -24;
+    yCorners[9] = -15;
+    xCorners[10] = -6;
+    yCorners[10] = -15;
+    xCorners[11] = -3;
+    yCorners[11] = -9;
+    xCorners[12] = 9;
+    yCorners[12] = -6;
+
 
 
 
     myColor=color(255);
 
-    myCenterX=250;
-    myCenterY=250;
+    myCenterX=500;
+    myCenterY=500;
 
     myXspeed=0;
     myYspeed=0;
