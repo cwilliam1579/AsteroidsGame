@@ -8,8 +8,8 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
   protected double myXspeed, myYspeed; //holds the speed of travel in the x and y directions
   protected double myPointDirection; //holds current direction the ship is pointing in degrees
   //Accelerates the floater in the direction it is pointing (myPointDirection)
-    
-  
+
+
   public void accelerate (double dAmount)
   {
     //convert the current direction the floater is pointing to radians
@@ -45,14 +45,14 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
     }
 
     //Speed Limiter
-    if (myXspeed >10)
-      myXspeed=10;
-    if (myXspeed <-10)
-      myXspeed=-10;
-    if (myYspeed > 10)
-      myYspeed=10;
-    if (myYspeed <-10)
-      myYspeed=-10;
+    if (myXspeed >7)
+      myXspeed=7;
+    if (myXspeed <-7)
+      myXspeed=-7;
+    if (myYspeed > 7)
+      myYspeed=7;
+    if (myYspeed <-7)
+      myYspeed=-7;
   }
   public void show ()  //Draws the floater at the current position
   {
