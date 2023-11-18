@@ -6,7 +6,7 @@ Star[] starz = new Star[400]; // stars
 public void setup()
 {
   size (1000, 1000);
-
+  frameRate(144);
   for (int i =0; i<starz.length; i++) { //initializing stars
     starz[i] = new Star();
   }
@@ -22,21 +22,21 @@ public void draw()
 
 
 
-//buttons
-  if (keys[0]) { 
-    ship.turn(-5);
+  //buttons
+  if (keys[0]) {
+    ship.turn(-3);
   }
 
   if (keys[1]) {
-    ship.accelerate(0.09);
+    ship.accelerate(0.025);
   }
 
   if (keys[2]) {
-    ship.turn(5);
+    ship.turn(3);
   }
 
   if (keys[3]) {
-    ship.accelerate(-0.09);
+    ship.accelerate(-0.025);
   }
 
   if (keys[4]) {
@@ -67,12 +67,12 @@ public void keyPressed() {
   if (key ==  ' ') {
     keys[4] = true;
   }
-  
-  if (key=='r'){
-  ship.hyperspace();
+
+  if (key=='r') {
+    ship.hyperspace();
   }
-  
-  if (key=='e'){
+
+  if (key=='e') {
     ship.myXspeed=0;
     ship.myYspeed=0;
   }
@@ -98,4 +98,3 @@ public void keyReleased() {
     keys[4] = true;
   }
 }
-
