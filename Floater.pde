@@ -7,8 +7,9 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
   protected double myCenterX, myCenterY; //holds center coordinates
   protected double myXspeed, myYspeed; //holds the speed of travel in the x and y directions
   protected double myPointDirection; //holds current direction the ship is pointing in degrees
-
   //Accelerates the floater in the direction it is pointing (myPointDirection)
+    
+  
   public void accelerate (double dAmount)
   {
     //convert the current direction the floater is pointing to radians
@@ -27,7 +28,6 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
     //change the x and y coordinates by myXspeed and myYspeed
     myCenterX += myXspeed;
     myCenterY += myYspeed;
-
     //wrap around screen
     if (myCenterX >width)
     {
@@ -43,34 +43,27 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
     {
       myCenterY = height;
     }
-System.out.println(myXspeed);
-System.out.println(myYspeed);
-
 
     //Speed Limiter
     if (myXspeed >10)
-    myXspeed=10;
+      myXspeed=10;
     if (myXspeed <-10)
-    myXspeed=-10;
+      myXspeed=-10;
     if (myYspeed > 10)
-    myYspeed=10;
-      if (myYspeed <-10)
-    myYspeed=-10;
+      myYspeed=10;
+    if (myYspeed <-10)
+      myYspeed=-10;
   }
   public void show ()  //Draws the floater at the current position
   {
     fill(myColor);
     stroke(myColor);
-
     //translate the (x,y) center of the ship to the correct position
     translate((float)myCenterX, (float)myCenterY);
-
     //convert degrees to radians for rotate()
     float dRadians = (float)(myPointDirection*(Math.PI/180));
-
     //rotate so that the polygon will be drawn in the correct direction
     rotate(dRadians);
-
     //draw the polygon
     beginShape();
     for (int nI = 0; nI < corners; nI++)
@@ -78,9 +71,8 @@ System.out.println(myYspeed);
       vertex(xCorners[nI], yCorners[nI]);
     }
     endShape(CLOSE);
-
     //"unrotate" and "untranslate" in reverse order
     rotate(-1*dRadians);
     translate(-1*(float)myCenterX, -1*(float)myCenterY);
   }
-  }
+}
