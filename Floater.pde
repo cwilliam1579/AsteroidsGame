@@ -45,14 +45,14 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
     }
 
     //Speed Limiter
-    if (myXspeed >7)
-      myXspeed=7;
-    if (myXspeed <-7)
-      myXspeed=-7;
-    if (myYspeed > 7)
-      myYspeed=7;
-    if (myYspeed <-7)
-      myYspeed=-7;
+    if (myXspeed >6)
+      myXspeed=6;
+    if (myXspeed <-6)
+      myXspeed=-6;
+    if (myYspeed > 6)
+      myYspeed=6;
+    if (myYspeed <-6)
+      myYspeed=-6;
   }
   public void show ()  //Draws the floater at the current position
   {
