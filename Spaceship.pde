@@ -40,8 +40,8 @@ class Spaceship extends Floater
 
     myColor=color(255);
 
-    myCenterX=500;
-    myCenterY=500;
+    myCenterX=375;
+    myCenterY=375;
 
     myXspeed=0;
     myYspeed=0;
@@ -51,10 +51,18 @@ class Spaceship extends Floater
   }
 
   public void hyperspace() {
-    myCenterX=(int)(Math.random()*1001);
-    myCenterY=(int)(Math.random()*1001);
+    myCenterX=(int)(Math.random()*751);
+    myCenterY=(int)(Math.random()*751);
     myXspeed=0;
     myYspeed=0;
     myPointDirection=(int)(Math.random()*360);
+  }
+  
+  public float getY() {
+    return (float)myCenterY;
+  }
+
+  public float getX() {
+    return (float) myCenterX;
   }
 }
