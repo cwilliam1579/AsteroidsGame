@@ -1,14 +1,20 @@
 boolean[] keys = new boolean[5]; // a, w, d, s, space
 
 Spaceship ship = new Spaceship(); // spaceship
-Star[] starz = new Star[400]; // stars
+Star[] starz = new Star[250]; // stars
+ArrayList <Asteroid> ast=new ArrayList <Asteroid>();
+
 
 public void setup()
 {
-  size (1000, 1000);
+  size (750, 750);
   frameRate(144);
   for (int i =0; i<starz.length; i++) { //initializing stars
     starz[i] = new Star();
+  }
+  
+  for (int k=0;k<8;k++){
+  ast.add(new Asteroid());
   }
 }
 public void draw()
@@ -17,8 +23,18 @@ public void draw()
 
   for (int i = 0; i < starz.length; i++) {  // showing stars
     starz[i].show();
+    starz[i].move();
   }
 
+for (int k=0;k<ast.size();k++){
+ast.get(k).move();
+ast.get(k).show();
+
+double d = dist(ship.getX(), ship.getY(), ast.get(k).getX(), ast.get(k).getY());  
+    if (d < 35) {
+      ast.remove(k);
+    }
+}
 
 
 
@@ -28,7 +44,7 @@ public void draw()
   }
 
   if (keys[1]) {
-    ship.accelerate(0.025);
+    ship.accelerate(0.020);
   }
 
   if (keys[2]) {
@@ -36,7 +52,7 @@ public void draw()
   }
 
   if (keys[3]) {
-    ship.accelerate(-0.025);
+    ship.accelerate(-0.020);
   }
 
   if (keys[4]) {
