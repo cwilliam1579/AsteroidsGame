@@ -1,8 +1,7 @@
-boolean[] keys = new boolean[5]; // a, w, d, s, space
-
-Spaceship ship = new Spaceship(); // spaceship
-Star[] starz = new Star[250]; // stars
-ArrayList <Asteroid> ast=new ArrayList <Asteroid>();
+private boolean[] keys = new boolean[5]; // a, w, d, s, space
+private  Spaceship ship = new Spaceship(); // spaceship
+private  Star[] starz = new Star[250]; // stars
+private ArrayList <Asteroid> ast=new ArrayList <Asteroid>();
 
 
 public void setup()
