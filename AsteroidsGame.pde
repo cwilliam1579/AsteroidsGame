@@ -41,7 +41,6 @@ if (score>=2000){
   textSize(30);
   fill(255,0 , 0);
   text(word, 50, 80);
-  System.out.println(word);
 }
 
 if (score<2000){
