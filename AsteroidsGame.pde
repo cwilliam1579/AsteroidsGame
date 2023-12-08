@@ -24,7 +24,6 @@ public void setup()
 public void draw()
 {
   frameDiff++;
-  System.out.println(frameDiff);
   background(0);
 
   if (score<0)
