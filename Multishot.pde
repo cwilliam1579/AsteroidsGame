@@ -6,7 +6,7 @@ class Multishot extends Floater
 
     myCenterX = theShip.getX();
     myCenterY = theShip.getY();
-    myAngle = Math.random()*2*Math.PI;
+    myAngle = Math.random()*8*Math.PI;
     mySpeed=7;
   }
 
@@ -16,7 +16,18 @@ class Multishot extends Floater
   }
   void show() {
     noStroke();
-    fill(255, 255, 255);
+    fill(0, 255, 50);
     ellipse((int)myCenterX, (int)myCenterY, 15, 15);
   }
+  
+  //Getter functions
+
+    public float getY() {
+    return (float)myCenterY;
+  }
+
+  public float getX() {
+    return (float) myCenterX;
+  }
+  
 }
