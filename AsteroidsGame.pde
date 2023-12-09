@@ -25,7 +25,6 @@ public void setup()
 public void draw()
 {
   frameDiff++;
-  System.out.println(frameDiff);
   background(0);
 
   if (score<0)
@@ -43,7 +42,6 @@ public void draw()
     textSize(30);
     fill(255, 0, 0);
     text(word, 50, 80);
-    System.out.println(word);
   }
 
   if (score<2000) {
