@@ -5,8 +5,9 @@ private ArrayList <Asteroid> ast=new ArrayList <Asteroid>();
 private ArrayList <Bullet> bull = new ArrayList <Bullet> ();
 private ArrayList <Superbullet> sup = new ArrayList <Superbullet> ();
 private int frameDiff = 0;
-private int score=0;
+private int score=100000;
 private String word = "";
+private ArrayList <Multishot> mul = new ArrayList <Multishot> ();
 
 
 public void setup()
@@ -24,28 +25,33 @@ public void setup()
 public void draw()
 {
   frameDiff++;
+  System.out.println(frameDiff);
   background(0);
 
   if (score<0)
     score=0;
-    
+
   textSize(30);
   fill(255, 255, 255);
   text("Score: "+score, 50, 50);
-  
-  
-  
 
-if (score>=2000){
-  word="Pierce Shot Unlocked! [z]";
-  textSize(30);
-  fill(255,0 , 0);
-  text(word, 50, 80);
-}
 
-if (score<2000){
-word="";
-}
+
+
+  if (score>=2000) {
+    word="Pierce Shot Unlocked! [z]";
+    textSize(30);
+    fill(255, 0, 0);
+    text(word, 50, 80);
+    System.out.println(word);
+  }
+
+  if (score<2000) {
+    word="";
+  }
+
+
+
 
   for (int i = 0; i < starz.length; i++) {  // showing stars
     starz[i].show();
@@ -77,6 +83,13 @@ word="";
         break;
       }
     }
+  }
+
+  for (int p = 0; p < mul.size(); p++) {
+    mul.get(p).show();
+    mul.get(p).move();
+    //ADD GETTER FUNCTIONS FOR MULTISHOT X AND Y
+    
   }
 
   for (int k = 0; k < sup.size(); k++) {
@@ -159,6 +172,15 @@ public void keyPressed() {
         ship.accelerate(-2);
         frameDiff=0;
       }
+    }
+  }
+
+  if (key=='v') {
+    if (frameDiff>720 && score>=5000) {
+      for (int i=0; i < 20; i++) {
+        mul.add(new Multishot(ship));
+      }
+      frameDiff=0;
     }
   }
 }
