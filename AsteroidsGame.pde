@@ -156,7 +156,7 @@ public void draw()
     ship.accelerate(-0.025);
   }
 
-  if (keys[4] && frameDiff > 50) {
+  if (keys[4] && frameDiff > 77) {
     bull.add(new Bullet(ship));
     frameDiff=0;
   }
