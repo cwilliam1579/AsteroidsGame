@@ -206,7 +206,7 @@ public void keyPressed() {
   }
 
   if (key=='v') {
-    if (frameDiff>500 && score>=5000) {
+    if (frameDiff>350 && score>=5000) {
       for (int i=0; i < 5; i++) {
         mul.add(new Multishot(ship));
       }
