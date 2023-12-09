@@ -45,12 +45,12 @@ public class Asteroid extends Floater {
       rotatespeed = 1;
     }
   }
-
   public void move () {
     turn(rotatespeed);
     super.move();
   }
-
+  
+//Getter functions
   public float getY() {
     return (float)myCenterY;
   }
